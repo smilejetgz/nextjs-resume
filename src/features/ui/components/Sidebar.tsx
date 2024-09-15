@@ -1,96 +1,73 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { useState } from 'react';
+import { AlignJustify } from 'lucide-react';
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <>
-      {/* Toggle Mobile */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed left-4 top-4 rounded-lg bg-gray-900 p-2 text-2xl text-white hover:bg-gray-700 md:hidden"
-      >
-        <Menu />
-      </button>
-
-      {/* Desktop */}
-      <nav className="sticky top-0 hidden h-screen w-60 flex-col items-start justify-center gap-6 bg-gray-900 p-6 text-white shadow-lg md:flex">
-        <Link
-          href="/"
-          className="text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
+      <nav className="sticky top-0 flex flex-row items-center justify-between border-b border-slate-700 bg-slate-950/10 p-10 text-slate-200 backdrop-blur">
+        <h1 className="cursor-pointer text-4xl font-extrabold">Profile</h1>
+        <button
+          className="block rounded-md p-2 transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110 hover:bg-slate-700 md:hidden"
+          onClick={toggleMenu}
         >
-          Personal
-        </Link>
-        <Link
-          href="education"
-          className="text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Education
-        </Link>
-        <Link
-          href="skills"
-          className="text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Skills
-        </Link>
-        <Link
-          href="experience"
-          className="text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Experience
-        </Link>
-        <Link
-          href="portfolio"
-          className="text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Portfolio
-        </Link>
+          <AlignJustify />
+        </button>
+        <ul className="hidden gap-5 text-xl font-bold md:flex">
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              About
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              Study
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              Work
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              DarkMode
+            </Link>
+          </li>
+        </ul>
       </nav>
 
       {/* Mobile */}
       <nav
-        className={`fixed left-0 top-0 h-screen w-64 bg-gray-900 p-6 pt-14 text-white shadow-lg md:hidden ${isOpen ? 'block' : 'hidden'}`}
+        className={`fixed w-full border-r border-slate-700 bg-slate-950/10 p-6 text-slate-200 shadow-lg backdrop-blur md:hidden ${menuOpen ? 'block' : 'hidden'}`}
       >
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 text-2xl"
-        >
-          &times;
-        </button>
-        <Link
-          href="/"
-          className="mb-4 block text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Personal
-        </Link>
-        <Link
-          href="education"
-          className="mb-4 block text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Education
-        </Link>
-        <Link
-          href="skills"
-          className="mb-4 block text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Skills
-        </Link>
-        <Link
-          href="experience"
-          className="mb-4 block text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Experience
-        </Link>
-        <Link
-          href="portfolio"
-          className="block text-lg font-medium transition duration-300 hover:text-gray-400 hover:underline"
-        >
-          Portfolio
-        </Link>
+        <ul className="flex flex-col items-center justify-center gap-5 text-lg">
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              About
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              Study
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              Work
+            </Link>
+          </li>
+          <li className="transition delay-150 ease-in-out hover:-translate-y-0 hover:scale-110">
+            <Link href="/" className="hover:text-slate-300">
+              DarkMode
+            </Link>
+          </li>
+        </ul>
       </nav>
     </>
   );
