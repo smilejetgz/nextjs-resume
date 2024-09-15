@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} bg-gradient-to-br from-gray-800 from-10% via-slate-900 via-40% to-indigo-950 to-90% antialiased`}
+        className={`${roboto.className} min-h-screen bg-gradient-to-br from-gray-800 from-10% via-slate-900 via-40% to-indigo-950 to-90% antialiased`}
       >
         <Sidebar />
-        <main className="mt-12 flex min-h-screen flex-1 items-center justify-center p-6 md:mt-0">
+        <main className="mt-12 flex flex-1 items-center justify-center p-6 text-slate-200 md:mt-0">
           {children}
         </main>
       </body>

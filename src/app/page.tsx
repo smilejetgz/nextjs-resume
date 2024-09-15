@@ -1,5 +1,7 @@
+import AboutDetail from '@/features/About/AboutDetail';
+
 const Page = () => {
-  return <></>;
+  return <AboutDetail />;
 };
 
 export default Page;
