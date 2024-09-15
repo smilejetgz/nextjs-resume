@@ -1,5 +1,6 @@
 import { FaFacebook, FaGithub, FaMailBulk, FaLine } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const AboutDetail = () => {
   return (
@@ -30,22 +31,38 @@ const AboutDetail = () => {
 
         {/* Contact Buttons */}
         <div className="flex flex-col space-y-2">
-          <button className="flex items-center rounded-full bg-green-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-green-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-offset-2">
+          <Link
+            href="https://line.me/ti/p/WqtyVitbBA"
+            target="_blank"
+            className="flex items-center rounded-full bg-green-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-green-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-800 focus:ring-offset-2"
+          >
             <FaLine className="mr-2 h-5 w-5" />
             <span>092 081 9728</span>
-          </button>
-          <button className="flex items-center rounded-full bg-blue-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-blue-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2">
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100008374176106"
+            target="_blank"
+            className="flex items-center rounded-full bg-blue-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-blue-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-800 focus:ring-offset-2"
+          >
             <FaFacebook className="mr-2 h-5 w-5" />
             <span>Smile Jet</span>
-          </button>
-          <button className="flex items-center rounded-full bg-gray-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-gray-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2">
+          </Link>
+          <Link
+            href="https://github.com/smilejetgz/"
+            target="_blank"
+            className="flex items-center rounded-full bg-gray-600 px-4 py-2 text-lg font-semibold text-blue-100 hover:border-transparent hover:bg-gray-950 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
+          >
             <FaGithub className="mr-2 h-5 w-5" />
             <span>SmilejetGz</span>
-          </button>
-          <button className="flex items-center rounded-full bg-gray-200 px-4 py-2 text-lg font-semibold text-black hover:border-transparent hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2">
+          </Link>
+          <Link
+            href="mailto:TirajetChukleang@gmail.com"
+            target="_blank"
+            className="flex items-center rounded-full bg-gray-200 px-4 py-2 text-lg font-semibold text-black hover:border-transparent hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2"
+          >
             <FaMailBulk className="mr-2 h-5 w-5" />
             <span>TirajetChukleang@gmail.com</span>
-          </button>
+          </Link>
         </div>
 
         <p className="py-4 font-medium text-slate-200">

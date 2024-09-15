@@ -23,23 +23,28 @@ const Sidebar = () => {
         </button>
         <ul className="hidden gap-5 text-xl font-bold md:flex">
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="About Page">
+            <Link href="#about" scroll={true} aria-label="About Page">
               About
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Skills Page">
+            <Link href="#skills" scroll={true} aria-label="Skills Page">
               Skills
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Education Page">
+            <Link href="#education" scroll={true} aria-label="Education Page">
               Education
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Experience Page">
+            <Link href="#experience" scroll={true} aria-label="Experience Page">
               Experience
+            </Link>
+          </li>
+          <li className="transform transition hover:scale-110 hover:text-slate-300">
+            <Link href="#repository" scroll={true} aria-label="Experience Page">
+              Repository
             </Link>
           </li>
         </ul>
@@ -51,23 +56,28 @@ const Sidebar = () => {
       >
         <ul className="flex flex-col items-center justify-center gap-5 text-lg">
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="About Page">
+            <Link href="#about" scroll={true} aria-label="About Page">
               About
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Skills Page">
+            <Link href="#skills" scroll={true} aria-label="Skills Page">
               Skills
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Education Page">
+            <Link href="#education" scroll={true} aria-label="Education Page">
               Education
             </Link>
           </li>
           <li className="transform transition hover:scale-110 hover:text-slate-300">
-            <Link href="/" aria-label="Experience Page">
+            <Link href="#experience" scroll={true} aria-label="Experience Page">
               Experience
+            </Link>
+          </li>
+          <li className="transform transition hover:scale-110 hover:text-slate-300">
+            <Link href="#repository" scroll={true} aria-label="Experience Page">
+              Repository
             </Link>
           </li>
         </ul>
