@@ -77,7 +77,7 @@ const ExperienceDetail = () => {
         </div>
 
         <div className="flex flex-col gap-1 border-b p-4 sm:text-center md:text-left">
-          <h3 className="text-2x break-alll font-bold">
+          <h3 className="text-2xl font-bold">
             Security Enhancement in Smart Logistics with Blockchain Technology:
             A Home Delivery Use Case
           </h3>
