@@ -1,7 +1,6 @@
 import {
   FaPython,
   FaPhp,
-  FaReact,
   FaBootstrap,
   FaDocker,
   FaGithub,
@@ -20,10 +19,12 @@ import {
   SiJupyter,
   SiMysql,
   SiMui,
+  SiNodedotjs,
+  SiExpress,
 } from 'react-icons/si';
-import { RiNextjsFill } from 'react-icons/ri';
+import { RiNextjsFill, RiAngularjsFill } from 'react-icons/ri';
 import { VscVscode } from 'react-icons/vsc';
-import { BiLogoPostgresql } from 'react-icons/bi';
+import { BiLogoPostgresql, BiLogoMongodb } from 'react-icons/bi';
 const SkillsDetail = () => {
   return (
     <div className="mx-auto flex w-full max-w-4xl space-y-8 rounded-xl bg-slate-950/10 px-8 py-8 shadow-lg md:space-x-8 md:space-y-0">
@@ -68,19 +69,27 @@ const SkillsDetail = () => {
             <SiSolidity className="h-24 w-24 p-4" />
             <span>Solidity</span>
           </div>
+          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
+            <SiNodedotjs className="h-24 w-24 p-4" />
+            <span>NodeJS</span>
+          </div>
         </div>
         <hr />
 
         {/* Skill Frameworks */}
         <p className="font-medium text-slate-200">Frameworks :</p>
-        <div className="grid flex-1 gap-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
           <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
-            <div className="flex flex-row items-center justify-center">
-              <RiNextjsFill className="h-24 w-24 p-4" />
-              <span className="text-2xl">+</span>
-              <FaReact className="h-24 w-24 p-4" />
-            </div>
+            <SiExpress className="h-24 w-24 p-4" />
+            <span>ExpressJS</span>
+          </div>
+          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
+            <RiNextjsFill className="h-24 w-24 p-4" />
             <span>NextJS</span>
+          </div>
+          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
+            <RiAngularjsFill className="h-24 w-24 p-4" />
+            <span>Angular</span>
           </div>
         </div>
         <hr />
@@ -113,6 +122,10 @@ const SkillsDetail = () => {
           <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
             <BiLogoPostgresql className="h-24 w-24 p-4" />
             <span>Postgresql</span>
+          </div>
+          <div className="flex flex-col items-center rounded-xl border border-gray-200 bg-gray-100/5 px-4 py-2 text-lg font-semibold text-blue-100 hover:bg-slate-950/50 hover:text-white">
+            <BiLogoMongodb className="h-24 w-24 p-4" />
+            <span>MongoDB</span>
           </div>
         </div>
         <hr />

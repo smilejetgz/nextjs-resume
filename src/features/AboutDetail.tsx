@@ -1,6 +1,9 @@
+'use client';
+
 import { FaFacebook, FaGithub, FaMailBulk, FaLine } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
+import { TypeAnimation } from 'react-type-animation';
 
 const AboutDetail = () => {
   return (
@@ -19,7 +22,21 @@ const AboutDetail = () => {
       {/* Text Section */}
       <div className="w-full space-y-4 p-4 text-center sm:text-left">
         <h1 className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text py-3 text-5xl font-bold text-transparent">
-          Tirajet Chukleang
+          <TypeAnimation
+            sequence={[
+              'Hello !',
+              1000,
+              'My name is',
+              1000,
+              'Tirajet Chukleang',
+              10000,
+              () => {
+                console.log('Sequence completed');
+              },
+            ]}
+            cursor={true}
+            repeat={Infinity}
+          />
         </h1>
         <p className="font-medium text-slate-200">
           I am a recent Master&apos;s graduate with a degree in Management of
